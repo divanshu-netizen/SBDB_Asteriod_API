@@ -4,7 +4,7 @@ Automation Suite for testing CIT SBDB Asteriod API
 # Prerequisites
 Docker should be installed and running 
 
-# Cloning the Repo from Guthbub
+# Cloning the Repo from Githbub
 ```
 git clone https://github.com/divanshu-netizen/SBDB_Asteriod_API.git
 ```
