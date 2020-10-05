@@ -5,10 +5,14 @@ Automation Suite for testing CIT SBDB Asteriod API
 Docker should be installed and running 
 
 # Cloning the Repo from Guthbub
+```
 git clone https://github.com/divanshu-netizen/SBDB_Asteriod_API.git
+```
 
 # Accessing the Code and  Running DockereFile 
-cd to asteriod_api
+```
+cd SBDB_Asteriod_API/asteriods_api
+```
 
 Go to the Command Prompt(Windows) or Terminal(MacOs/Linux)
 Running DockerFile and creating an image, the steps will download all the dependencies needed to run the script
@@ -19,9 +23,9 @@ Tagging the image
 ```
 docker build -t <image-name> .
 ```
-Running the container and running the script in path_container
+Running container from the tagged image, copying script from local to the container and running script inside container
 ```
-docker run -ti -v <path_asteriod_Api>:<path_container> <tagged-image-name> bash
+docker run -ti -v </host/local/path/file>:</file/path/in/container/file> <tagged-image-name> bash
 ```  
 
 # Running Script and generating reports
@@ -32,6 +36,11 @@ cd SBDB_Asteriod_API/asteriods_api/TestCases
 ```
 
 ```
-robot --report /usr/src/SBDB_Asteriod_API/asteriods_api/TestReports/report.html --output /usr/src/SBDB_Asteriod_API/asteriods_api/TestReports/output.xml --log /usr/src/SBDB_Asteriod_API/asteriods_api/TestReports/TestReports/log.html testcase.robot
+robot testcase.robot
 ```
 
+```
+docker cp <containerId>:</file/path/in/container/file> </host/local/path/file>
+```
+Copy the report.html, log.html and output.xml files from container to the localhost,
+open the file report.html in a browser 
