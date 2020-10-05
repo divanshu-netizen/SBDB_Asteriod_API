@@ -2,7 +2,7 @@
 Automation Suite for testing CIT SBDB Asteriod API
 
 # Prerequisites
-Docker should be installed and running 
+Docker should be pre-installed and running 
 
 # Cloning the Repo from Githbub
 ```
@@ -23,24 +23,17 @@ Tagging the image
 ```
 docker build -t <image-name> .
 ```
+# Running Script and Generating Reports
 Running container from the tagged image, copying script from local to the container and running script inside container
 ```
-docker run -ti -v </host/local/path/file>:</file/path/in/container/file> <tagged-image-name> bash
+docker run -ti -v </host/local/path/file>:</file/path/in/container/file> <tagged-image-name>
 ```  
 
-# Running Script and generating reports
-Go to the path in the container where you have copied Script from your local machine and run robot commands to execte script
-
-```
-cd SBDB_Asteriod_API/asteriods_api/TestCases
-```
-
-```
-robot testcase.robot
-```
-
-```
-docker cp <containerId>:</file/path/in/container/file> </host/local/path/file>
-```
-Copy the report.html, log.html and output.xml files from container to the localhost,
-open the file report.html in a browser 
+ Reports will be saved by default in TestCases folder:
+ 
+ There are 3 types of report files generated:
+ report.html,
+ log.html,
+ output.xml
+ 
+ Open report.html file in a web browser
