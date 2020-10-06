@@ -1,6 +1,27 @@
 # SBDB_Asteriod_API
 Automation Suite for testing CIT SBDB Asteriod API
 
+# Robot Framework Intro
+Robot Framework is a generic open source automation framework for acceptance testing, acceptance test driven development (ATDD), and robotic process automation (RPA). It has simple plain text syntax and it can be extended easily with libraries implemented using Python or Java.
+Robot Framework is operating system and application independent. The core framework is implemented using Python, supports both Python 2 and Python 3
+
+The framework has a rich ecosystem around it consisting of various generic libraries and tools that are developed as separate projects. For more information about Robot Framework and the ecosystem.
+
+Robot Framework has a modular architecture that can be extended with bundled and self-made libraries.
+
+When execution is started, the framework first parses the data. It then utilizes keywords provided by the libraries to interact with the target system. Libraries can communicate with the system either directly or using other tools as drivers.
+
+Test or task execution is started from the command line. As a result, you get a report and log in HTML format as well as an XML output. These provide an extensive look into what your system does.
+
+# Code Structure
+
+There are 3 main components in this code base:
+TestCases folder has main script that will be run in the Dockerfile i.e testcase.robot file.
+
+Resources folder has user defined keywords file, this file is being imported in the testcase file.
+
+Dockerfile This file is creating an image, running a container , downloading the dependencies & binary filesi.e python and robot framework libraries, running testcase.robot file and generating report.html, log.html and output.xml files in TestCases folder.
+
 # Prerequisites
 Docker should be pre-installed and running 
 
