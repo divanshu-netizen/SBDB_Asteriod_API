@@ -44,7 +44,7 @@ Tagging the image
 ```
 docker build -t <image-name> .
 ```
-# Running Script and Generating Reports
+# Running Docker command to run Script and Generating Reports
 Running container from the tagged image, copying script from local to the container and running script inside container
 ```
 docker run -ti -v </host/local/path/file>:</file/path/in/container/file> <tagged-image-name>
